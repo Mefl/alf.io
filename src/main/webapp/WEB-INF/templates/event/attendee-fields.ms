@@ -5,7 +5,7 @@
 {{/ticketFieldConfigurationBeforeStandard}}
 {{#useFirstAndLastName}}
     <div class="form-group {{#field-has-error}}[{{elementNamePrefix}}firstName] has-error{{/field-has-error}}">
-        <label class="col-sm-3 control-label" for="first-name-{{uuid}}">{{#i18n}}common.first-name{{/i18n}} *</label>
+        <label class="col-sm-3 control-label" for="first-name-{{uuid}}">{{#i18n}}common.first-name-attendee{{/i18n}} *</label>
         <div class="col-sm-9">
             {{^lockedAssignment}}
                 <input type="text" name="{{elementNamePrefix}}firstName" value="{{firstName}}" required id="first-name-{{uuid}}" class="form-control attendee-first-name untouched field-required"  maxlength="255" autocomplete="fname">
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="form-group {{#field-has-error}}[{{elementNamePrefix}}lastName] has-error{{/field-has-error}}">
-        <label class="col-sm-3 control-label" for="last-name-{{uuid}}">{{#i18n}}common.last-name{{/i18n}} *</label>
+        <label class="col-sm-3 control-label" for="last-name-{{uuid}}">{{#i18n}}common.last-name-attendee{{/i18n}} *</label>
         <div class="col-sm-9">
             {{^lockedAssignment}}
                 <input type="text" name="{{elementNamePrefix}}lastName" value="{{lastName}}" required id="last-name-{{uuid}}" class="form-control  attendee-last-name untouched field-required"  maxlength="255" autocomplete="lname">
@@ -29,7 +29,7 @@
 {{/useFirstAndLastName}}
 {{^useFirstAndLastName}}
     <div class="form-group {{#field-has-error}}[{{elementNamePrefix}}fullName] has-error{{/field-has-error}}">
-        <label class="col-sm-3 control-label" for="full-name-{{uuid}}">{{#i18n}}common.full-name{{/i18n}} *</label>
+        <label class="col-sm-3 control-label" for="full-name-{{uuid}}">{{#i18n}}common.full-name-attendee{{/i18n}} *</label>
         <div class="col-sm-9">
             {{^lockedAssignment}}
                 <input type="text" name="{{elementNamePrefix}}fullName" value="{{fullName}}" required id="full-name-{{uuid}}" class="form-control attendee-full-name untouched field-required"  maxlength="255" autocomplete="name">
