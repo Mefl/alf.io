@@ -40,7 +40,7 @@
         </div>
     </div>
 {{/useFirstAndLastName}}
-<div class="form-group {{#field-has-error}}[{{elementNamePrefix}}email] has-error{{/field-has-error}}" style="display:none">
+<div class="form-group {{#field-has-error}}[{{elementNamePrefix}}email] has-error{{/field-has-error}}" >
     <label class="col-sm-3 control-label" for="email-{{uuid}}">{{#i18n}}common.email{{/i18n}} *</label>
     <div class="col-sm-9">
         {{^lockedAssignment}}
