@@ -82,7 +82,7 @@
         <div class="col-xs-12">
             <div class="form-group {{#field-has-error}}[email] has-error{{/field-has-error}}">
                 <label for="email" class="control-label">{{#i18n}}common.email{{/i18n}} *</label>
-                <input type="email" name="email" id="email" required class="form-control {{#attendeeAutocompleteEnabled}}autocomplete-src{{/attendeeAutocompleteEnabled}}" autocomplete="email" maxlength="255" value="{{paymentForm.email}}">
+                <input type="email" name="email" id="email" required class="form-control autocomplete-src" autocomplete="email" maxlength="255" value="{{paymentForm.email}}">
                 {{#field-has-error}}[email]<span class="help-block text-danger">{{#i18n}}{{#field-error}}email{{/field-error}}{{/i18n}}</span>{{/field-has-error}}
             </div>
         </div>
