@@ -44,10 +44,13 @@ public class StripePaymentWebhookController {
             .map(content -> {
                 var result = ticketReservationManager.processTransactionWebhook(content, stripeSignature, PaymentProxy.STRIPE, Map.of());
                 if(result.isSuccessful()) {
+                    log.warn("EFL - payment webhook ok for transaction");
                     return ResponseEntity.ok("OK");
                 } else if(result.isError()) {
+                    log.warn("EFL - payment webhook failure : " + result.getReason());
                     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(result.getReason());
                 }
+                log.warn("EFL - payment webhook default clause : " + result.getReason());
                 return ResponseEntity.ok(result.getReason());
             })
             .orElseGet(() -> ResponseEntity.badRequest().body("NOK"));
